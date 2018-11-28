@@ -1,3 +1,6 @@
 # Python-Examples
-Working in progress. Currently in the process of organizing my contents.
+
+## Web Scrape Examples
+- Web Scrape (SocialBlade.com)(https://youtu.be/eB13-lUyD14)
+
 

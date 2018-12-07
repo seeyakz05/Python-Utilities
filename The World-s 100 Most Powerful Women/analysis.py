@@ -38,5 +38,7 @@ print(Counter(data['Category']))
 # Graph normal distribution
 # ---------------------------------
 plt.plot(sorted(data['Age']), norm.pdf(sorted(data['Age']), summary['mean'], summary['std']), '-o')
-plt.hist(data['Age'], normed=True)
+plt.hist(data['Age'], density=True)
+plt.ylabel('Probability Density')
+plt.xlabel('Age')
 plt.show()

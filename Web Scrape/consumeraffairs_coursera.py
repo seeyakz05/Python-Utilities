@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 import re
 
-
 BASE_URL = r'https://www.consumeraffairs.com/education/online-courses/coursera.html?page='
 pages = [1, 2]
 
@@ -30,9 +29,7 @@ for page in pages:
 			except Exception:
 				pass
 
-
 		# directly call the tag then wrap with attribute value
-
 		author = div.find('div', attrs={'class':'rvw-aut'})
 		reviewer_name = author.find('strong', attrs={'itemprop':'author'}).text
 		verified_buyer = ''
@@ -52,8 +49,6 @@ for page in pages:
 				review_comment += p.text + '\n' + ' \n'
 				print(review_comment)
 
-	
 		df = df.append({'Rating':rating, 'Verified Buyer':verified_buyer, 'Verified Reviewer':verified_reviewer, 'Reviewer Name':reviewer_name, 'Review Date':review_date, 'Review':review_comment}, ignore_index=True)
 	
-
 df.to_csv('test.csv', index=False)

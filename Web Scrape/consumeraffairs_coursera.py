@@ -47,7 +47,6 @@ for page in pages:
 		for p in body.find_all('p'):
 			if not p.text in review_comment:
 				review_comment += p.text + '\n' + ' \n'
-				print(review_comment)
 
 		df = df.append({'Rating':rating, 'Verified Buyer':verified_buyer, 'Verified Reviewer':verified_reviewer, 'Reviewer Name':reviewer_name, 'Review Date':review_date, 'Review':review_comment}, ignore_index=True)
 	
